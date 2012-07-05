@@ -1,6 +1,6 @@
 {
   "name": "signals",
-  "version": "0.0.1-18",
+  "version": "0.0.1-23",
   "engines": {
     "node": "0.6.x",
     "npm": "1.1.x"
@@ -28,7 +28,7 @@
   ],
   "subdomain": "signals",
   "scripts": {
-    "start": "./game"
+    "start": "coffee dev/game.coffee"
   },
   "os": [
     "linux",

@@ -1,4 +1,4 @@
-Promise = require "promised-io/promise"
+Promise = require 'promised-io/promise'
 request = require 'request'
 
 module.exports = ( app, express ) ->
@@ -8,8 +8,13 @@ module.exports = ( app, express ) ->
   app.facebookAppSecret = '1cb71dd07064e3d110f0d76695961664'
   app.facebookScope = 'email'
 
-  app.googleAppId = '1045311658397.apps.googleusercontent.com'
-  app.googleAppSecret = 'Wy21_PuUibbG-tIgaLXTOX8E'
+
+  if app.jitsu
+    app.googleAppId = '1045311658397-r3mbj4m7vlr9dodea8fho065crl3o4b5.apps.googleusercontent.com'
+    app.googleAppSecret = 'm6f5bKszPXbda9qAUtsEHFrA'
+  else
+    app.googleAppId = '1045311658397.apps.googleusercontent.com'
+    app.googleAppSecret = 'Wy21_PuUibbG-tIgaLXTOX8E'
   app.googleScope = 'https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.profile'
   app.googleApiKey = 'AIzaSyBQkgPKmh1xpBs2hYQPRUo8rgcMPgZMYlc'
 

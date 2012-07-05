@@ -19,6 +19,8 @@ app.sessionStore = new MemoryStore()
 
 app.everyauth.helpExpress app
 
+app.jitsu = true
+
 #config the app
 config = require('./config.coffee')(app, express)
 
